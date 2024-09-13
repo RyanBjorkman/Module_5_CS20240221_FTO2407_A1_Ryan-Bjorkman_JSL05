@@ -25,7 +25,7 @@ const guardians = {
     "Gamora": "Pop",
     "Drax": "R&B",
     "Rocket": "Indie",
-    "Groot": "Funk"
+    "Groot": "Rock"
     // Add preferences for Drax, Rocket, and Groot
 };
 
@@ -42,7 +42,35 @@ function generatePlaylist(guardians, songs) {
 
 }
 
-// Call generatePlaylist and display the playlists for each Guardian
+// Function to display each Guardian's playlist
+function displayPlaylist(guardian, playlist) {
+    // Get the #playlists div
+    const playlistsDiv = document.getElementById('playlists');
+
+    // Create a new div for each Guardian's playlist
+    const guardianDiv = document.createElement('div');
+    guardianDiv.className = 'playlist';
+
+    // Create and append the Guardian's name
+    const guardianName = document.createElement('h3');
+    guardianName.textContent = `${guardian}'s Playlist`;
+    guardianDiv.appendChild(guardianName);
+
+    // Create and append the list of songs
+    const songList = document.createElement('ul');
+    playlist.forEach(song => {
+        const songItem = document.createElement('li');
+        songItem.textContent = `${song.title} by ${song.artist}`;
+        songList.appendChild(songItem);
+    });
+    guardianDiv.appendChild(songList);
+
+    // Append the Guardian's playlist to the #playlists div
+    playlistsDiv.appendChild(guardianDiv);
+}
+
+// Call generatePlaylist to create and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
+
 
 
