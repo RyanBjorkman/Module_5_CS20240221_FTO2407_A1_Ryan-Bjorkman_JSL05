@@ -12,6 +12,10 @@ const songs = [
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
     // Feel free to add even more songs
+    { title: "Ophelia", artist: "The Lumineers", genre: "Indie" },
+    { title: "Bitter sweet symphony", artist: "The Verve", genre: "Indie" },
+    { title: "How you remind me", artist: "Nickelback", genre: "Rock" },
+
 ];
 
 
